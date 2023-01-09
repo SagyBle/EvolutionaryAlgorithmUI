@@ -1,0 +1,42 @@
+table {
+  width: 450px;
+  margin: auto;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
+}
+.kids-table-container-div{
+  min-height: 400px;
+}
+
+.enemies-table{
+  border:none;
+  width: 400px;
+}
+
+.enemy-button{
+  margin-top: 40px;
+}
+
+.low-border{
+  border-bottom: 1px solid black;
+}
+
+table tr:nth-child(odd) td{
+    background-color: white;
+}
+table tr:nth-child(even) td{
+    background-color: rgb(202, 210, 210);
+}
+
+.container-kids-table-div{
+  outline: auto;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+}

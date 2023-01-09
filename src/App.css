@@ -1,38 +1,129 @@
+input{
+    height: 40px;
+  width: 200px;
+  padding-left: 15px;
+  background-color: transparent;
+}
+
+input:focus{
+  outline: none;
+}
+
+
+button{
+  height: 46px;
+}
+
+
+
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  /* height: 80vh; */
+  height: fit-content;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.current-table-div{
+  outline: solid 1px black;
+  
+  margin-bottom: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-kids-div{
+  outline: solid 1px ;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-left: 40px;
+  /* min-height: 300px; */
+  height: fit-content;
+  width: 700px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(237, 234, 234);
+  border-radius: 10px;
+
+
+}
+
+.student-input{
+
+  margin-bottom: 30px;
+}
+
+.enemy-button{
+
+  margin-bottom: 30px;
+}
+
+.enemys-id-input{
+  border: 1px solid black;
+}
+
+.enemys-id-input:focus{
+  outline: none;
+}
+
+.info-header{
+  margin-left: 100px;
+  width: 100px;
+  /* display: inline-block; */
+  width: fit-content;
+}
+
+.add-student-button{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 300px;
+  outline: none;
+  border: none;
+  background-color: rgba(23, 159, 23, 0.959);
+  border-radius: 20px;
+}
+
+.add-student-button:hover{
+  background-color: rgba(23, 159, 23, 0.834);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.clean-button{
+  background-color: red;
+  color: azure;
+  width: fit-content;
+  height: 45px;
+  border-radius: 20px;
+  outline: 2px solid rgb(165, 3, 3);
+  border: none;
+  cursor: pointer;
+}
+
+.clean-button:hover{
   color: white;
+  background-color: brown;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.add-enemy-button{
+  color: black(255, 255, 255);
+  margin-left: -1px;
+  background-color: transparent;
+  border: solid black 1px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: fit-content;
+  height: 44px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.space-up{
+  margin-top: 20px;
+}
+
+
+.num-of-classrooms{
+  margin-top: 30px;
 }

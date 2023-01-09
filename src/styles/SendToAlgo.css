@@ -1,0 +1,31 @@
+.send-to-algo-cintainer{
+  display: flex;
+  justify-content: center;
+}
+
+
+.get-results-button{
+  width: 1000px;
+  background-color: rgb(8, 77, 240);
+  color: white;
+  font-weight:800;
+  font-size: 30px;
+  letter-spacing:0.2mm;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 100px;
+}
+
+.get-results-button:hover{
+  background-color: rgba(8, 78, 240, 0.831);
+
+}
+
+.get-results-button:active{
+  background-color: rgba(74, 127, 249, 0.831);
+  transition: 0.3s;
+}
+

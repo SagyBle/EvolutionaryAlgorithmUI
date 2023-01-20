@@ -6,7 +6,7 @@ function KidsTable(props) {
     <div className="kids-table-container-div">
       <div>
         <h3>
-          classrooms number:{" "}
+          Groups number:{" "}
           {props.numOfClassroomsSubmitted
             ? props.numOfClassroomsSubmitted
             : "Not Defined yet "}

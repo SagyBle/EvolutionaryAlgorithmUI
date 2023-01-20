@@ -20,19 +20,35 @@ function App() {
 
   const handleAddStudent = () => {
     // console.log({kidName, kidID, kidEnemies});
+    if (kidName === "" || kidID === "" || kidEnemies.length === 0) {
+      alert("please fill in all students fields");
+    } else {
+      let kid_line = null;
+      if ((kid_line = kidsTable.find((kid) => kid.kidID === kidID))) {
+        kid_line.kidEnemies = [...kid_line.kidEnemies, kidEnemies[0]];
+      } else {
+        setKidsTable([...kidsTable, { kidName, kidID, kidEnemies }]);
+      }
+      // setKidsTable([...kidsTable, kidID])
+      console.log("this is kids table:");
+      console.log(kidsTable);
 
-    setKidsTable([...kidsTable, { kidName, kidID, kidEnemies }]);
-    // setKidsTable([...kidsTable, kidID])
-    console.log("this is kids table:");
-    console.log(kidsTable);
-
-    setKidName("");
-    setKidID("");
-    setKidEnemies([]);
+      setKidName("");
+      setKidID("");
+      setKidEnemies([]);
+    }
   };
 
   const handleAddEnemy = () => {
-    if (currEnemy !== "") {
+    console.log("kidID");
+    console.log(typeof kidID);
+    console.log("currEnemy");
+    console.log(currEnemy);
+    console.log(typeof currEnemy);
+    console.log(currEnemy === kidID);
+    if (currEnemy === kidID) {
+      alert("kid cannot be enemy of himself!");
+    } else if (currEnemy !== "") {
       setKidEnemies([...kidEnemies, currEnemy]);
       setCurrEnemy("");
     } else {
@@ -146,7 +162,7 @@ function App() {
           <input
             type="number"
             onChange={(e) => setNumOfClassrooms(e.target.value)}
-            placeholder="Number of seperate classrooms"
+            placeholder="Number of Groups"
           />
           <button
             onClick={() => {
@@ -158,7 +174,11 @@ function App() {
         </div>
       </div>
       <div className="send-to-algo-div">
-        <SendToAlgo kidsTable={kidsTable} />
+        <SendToAlgo
+          kidsTable={kidsTable}
+          setKidsTable={setKidsTable}
+          numOfClassroomsSubmitted={numOfClassroomsSubmitted}
+        />
       </div>
     </div>
   );

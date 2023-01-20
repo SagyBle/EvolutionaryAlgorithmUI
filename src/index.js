@@ -8,7 +8,7 @@ root.render(
   <React.StrictMode>
     <header>
       <div className="header-div">
-        <h1>Distribution of problematic children to classes</h1>
+        <h1>Distribution of Football players into groups with dependencies</h1>
       </div>
     </header>
     <App />

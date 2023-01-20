@@ -29,3 +29,12 @@
   transition: 0.3s;
 }
 
+.results-div{
+  min-height: 300px;
+  background-color: aquamarine;
+}
+
+.results-div-center{
+  display: flex;
+  
+}

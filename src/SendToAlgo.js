@@ -5,6 +5,8 @@ function SendToAlgo({ kidsTable, setKidsTable, numOfClassroomsSubmitted }) {
   const [fitness, setFitness] = useState(null);
   const [colors, setColors] = useState(null);
   const [teams, setTeams] = useState({});
+  // const [gotResults, setGotResults] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
 
   const perpareQueryForAPI = async () => {
     let output = [numOfClassroomsSubmitted].concat(kidsTable);
@@ -20,9 +22,11 @@ function SendToAlgo({ kidsTable, setKidsTable, numOfClassroomsSubmitted }) {
 
     // console.log(output);
     // return output;
+    return true;
   };
 
   const handleGetResults = async () => {
+    setShowLoading(true);
     if (kidsTable.length === 0) {
       alert("Not recieved any students data");
     } else if (
@@ -31,8 +35,9 @@ function SendToAlgo({ kidsTable, setKidsTable, numOfClassroomsSubmitted }) {
     ) {
       alert("Not recieved any classroom number, please insert.");
     } else {
-      const query = perpareQueryForAPI();
+      perpareQueryForAPI();
     }
+    await setShowLoading(false);
   };
   const hadnleEample1 = () => {
     setKidsTable([
@@ -97,20 +102,26 @@ function SendToAlgo({ kidsTable, setKidsTable, numOfClassroomsSubmitted }) {
           <button onClick={handleGetResults} className="get-results-button">
             Get Results!
           </button>
+          {showLoading && <h1>Algorithm is working...</h1>}
         </div>
       </div>
       <div>
-        <button onClick={() => hadnleEample1()}>example1 data</button>
-        <button onClick={() => hadnleEample2()}>example2 data</button>
-        <button onClick={() => hadnleEample3()}>example3 data</button>
+        {/* <button onClick={() => hadnleEample1()}>example1 data</button> */}
+        {/* <button onClick={() => hadnleEample2()}>example2 data</button> */}
+        <button onClick={() => hadnleEample3()}>example data</button>
       </div>
       {colors ? (
         <div className="results-div-center">
           {fitness ? (
             <div>
-              <h3>Algorithm found seloution with {fitness} errors</h3>
+              <h3>
+                Algorithm found seloution with {fitness} errors, please try
+                again
+              </h3>
             </div>
-          ) : null}
+          ) : (
+            <h1>Algorithm found optimal solution!</h1>
+          )}
           <div className="results-div">
             <tr>
               <th>Players disribution</th>

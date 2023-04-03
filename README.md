@@ -1,4 +1,4 @@
-# EvolutionaryAlgorithmsBack
+# EvolutionaryAlgorithmsUI
 
 ### Welcome to our mini-project in EvolutionaryAlgorithms course.
 

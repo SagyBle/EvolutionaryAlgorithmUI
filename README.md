@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# EvolutionaryAlgorithmsBack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Welcome to our mini-project in EvolutionaryAlgorithms course.
 
-## Available Scripts
+## Steps to run our program:
+### Initialize the UI:
+  * Download the EvolutionaryAlgorithmUI from this [repositry](https://github.com/SagyBle/EvolutionaryAlgorithmUI).
+  * Make sure you have "node.js" package installed.
+  * Open the terminal inside this directory.
+  * Run "npm start" in the terminal.
+  * Open Google Chrome Browser in url: http://localhost:3000/.
+  * Maybe the local host opened on other port, be aware and change by it.
 
-In the project directory, you can run:
+### Initialize the server:
+  * Download the EvolutionaryAlgorithmBack from this [repository](https://github.com/SagyBle/EvolutionaryAlgorithmsBack).
+  * Make sure you have "uvicorn", "fastapi", "fastapi.middleware.cors", "eckity", "numpy" packages installed.
+  * Run "main.py" to start the server.
 
-### `npm start`
+### Run all together:
+  * Insert players data via the UI (there are also example data buttons).
+  * Insert number of teams.
+  * Press "get results" button.
+  * pressing this button will parse the data and transfer it to the backend, make the calculations using ec-kity library, parse it back and send it to the UI.
+  * Now you can see the results,  on the bottom of the page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Final report](url) :
+https://shaysagyminiproject.tiiny.site/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+enjoy!
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
